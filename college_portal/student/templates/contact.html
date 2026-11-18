@@ -1,10 +1,151 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>College Portal | Contact</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #102A56, #2563A6, #E4F1FF);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: #FFFFFF;
+            padding: 40px;
+            border-radius: 18px;
+            border: 1px solid #B8D7F5;
+            box-shadow: 0 15px 45px rgba(16,42,86,0.2);
+            text-align: center;
+        }
+
+        .logo {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #4A90E2, #2563C7);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        h1 {
+            color: #102A56;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #718096;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+        .contact-box {
+            background: #F0F6FF;
+            border: 1px solid #D4E3F7;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            text-align: left;
+            transition: 0.3s;
+        }
+
+        .contact-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(16,42,86,0.1);
+        }
+
+        .contact-box h3 {
+            color: #2563C7;
+            margin-bottom: 8px;
+            font-size: 17px;
+        }
+
+        .contact-box p {
+            color: #53657D;
+            font-size: 15px;
+        }
+
+        .line {
+            width: 70px;
+            height: 4px;
+            background: #2563C7;
+            border-radius: 5px;
+            margin: 20px auto;
+        }
+
+        .footer {
+            color: #8293AA;
+            font-size: 12px;
+            margin-top: 25px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 28px 20px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Welcome to contact</h1>
+
+<div class="container">
+
+    <div class="logo">C</div>
+
+    <h1>Contact Us</h1>
+
+    <p class="subtitle">
+        Welcome to College Portal. Get in touch with us.
+    </p>
+
+    <div class="line"></div>
+
+    <div class="contact-box">
+        <h3>✉ Email Address</h3>
+        <p>college@example.com</p>
+    </div>
+
+    <div class="contact-box">
+        <h3>☎ Phone Number</h3>
+        <p>+91 XXXXX XXXXX</p>
+    </div>
+
+    <div class="contact-box">
+        <h3>⌖ College Address</h3>
+        <p>Your College Address Here</p>
+    </div>
+
+    <div class="footer">
+        © 2026 College Portal. All Rights Reserved.
+    </div>
+
+</div>
+
 </body>
 </html>

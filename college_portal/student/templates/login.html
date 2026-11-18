@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College Portal | Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #102A56, #2563A6, #E4F1FF);
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 400px;
+            background: #FFFFFF;
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid #B8D7F5;
+            box-shadow: 0 15px 45px rgba(16,42,86,0.2);
+        }
+
+        .logo {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #4A90E2, #2563C7);
+            color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0 auto 18px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #102A56;
+            margin-bottom: 8px;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .input-box {
+            margin-bottom: 22px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #102A56;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #B8D7F5;
+            border-radius: 8px;
+            background: #F8FBFF;
+            outline: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #2563C7;
+            box-shadow: 0 0 8px rgba(37,99,199,0.25);
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #4A90E2, #2563C7);
+            color: #FFFFFF;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #2563C7, #102A56);
+            transform: translateY(-2px);
+            box-shadow: 0 7px 18px rgba(37,99,199,0.3);
+        }
+
+        .success {
+            margin-top: 20px;
+            padding: 13px;
+            background: #E4F2E5;
+            color: #245A2A;
+            border: 1px solid #9AC99F;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .error {
+            margin-top: 20px;
+            padding: 13px;
+            background: #FCE8E6;
+            color: #9B2929;
+            border: 1px solid #E5A5A0;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .footer {
+            text-align: center;
+            color: #8293AA;
+            font-size: 12px;
+            margin-top: 25px;
+        }
+
+        @media (max-width: 450px) {
+            .login-box {
+                padding: 28px 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <div class="logo">C</div>
+
+    <h1>Welcome Back</h1>
+    <p class="subtitle">College Portal Login</p>
+
+    <form action="/login/" method="POST">
+        {% csrf_token %}
+
+        <div class="input-box">
+            <label>Username</label>
+            <input type="text"
+                   name="username"
+                   placeholder="Enter your username"
+                   required>
+        </div>
+
+        <div class="input-box">
+            <label>Password</label>
+            <input type="password"
+                   name="password"
+                   placeholder="Enter your password"
+                   required>
+        </div>
+
+        <button type="submit">LOGIN</button>
+
+    </form>
+
+    {% if success %}
+        <div class="success">
+            Login Successful! Welcome {{ username }}.
+        </div>
+    {% endif %}
+
+    {% if error %}
+        <div class="error">
+            {{ error }}
+        </div>
+    {% endif %}
+
+    <div class="footer">
+        © 2026 College Portal. All Rights Reserved.
+    </div>
+
+</div>
+
+</body>
+</html>

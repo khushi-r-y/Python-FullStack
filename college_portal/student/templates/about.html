@@ -1,10 +1,112 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>College Portal | About</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #102A56, #2563A6, #E4F1FF);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: #FFFFFF;
+            padding: 45px 35px;
+            border-radius: 18px;
+            border: 1px solid #B8D7F5;
+            box-shadow: 0 15px 45px rgba(16,42,86,0.2);
+            text-align: center;
+        }
+
+        .logo {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #4A90E2, #2563C7);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 0 auto 22px;
+        }
+
+        h1 {
+            color: #102A56;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #718096;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .line {
+            width: 70px;
+            height: 4px;
+            background: #2563C7;
+            border-radius: 5px;
+            margin: 20px auto;
+        }
+
+        .footer {
+            margin-top: 30px;
+            color: #8293AA;
+            font-size: 12px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Welcome to about</h1>
+
+<div class="container">
+
+    <div class="logo">C</div>
+
+    <h1>Welcome to About</h1>
+
+    <div class="line"></div>
+
+    <p>
+        Welcome to College Portal.
+        This page provides information about our college
+        and its student management system.
+    </p>
+
+    <div class="footer">
+        © 2026 College Portal. All Rights Reserved.
+    </div>
+
+</div>
+
 </body>
 </html>

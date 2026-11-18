@@ -3,15 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>College Portal | Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #102A56, #2563A6, #E4F1FF);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 550px;
+            background: #FFFFFF;
+            padding: 35px;
+            border-radius: 18px;
+            border: 1px solid #B8D7F5;
+            box-shadow: 0 15px 45px rgba(16,42,86,0.2);
+        }
+
+        .logo {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #4A90E2, #2563C7);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0 auto 18px;
+        }
+
+        h1 {
+            color: #102A56;
+            font-size: 20px;
+            margin-bottom: 15px;
+            padding: 12px;
+            background: #F0F6FF;
+            border-radius: 8px;
+        }
+
+        .heading {
+            text-align: center;
+            color: #102A56;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        .section-title {
+            color: #2563C7;
+            margin: 20px 0 12px;
+            font-size: 19px;
+        }
+
+        .marks {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .mark-card {
+            background: #E4F1FF;
+            color: #102A56;
+            padding: 18px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            border: 1px solid #B8D7F5;
+        }
+
+        .footer {
+            text-align: center;
+            color: #8293AA;
+            font-size: 12px;
+            margin-top: 25px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px 20px;
+            }
+
+            .marks {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
+
+<div class="container">
+
+    <div class="logo">C</div>
+
+    <h2 class="heading">Welcome to College Portal</h2>
+    <p class="subtitle">Student Information</p>
+
     <h1>Name: {{data.name}}</h1>
+
     <h1>Age: {{data.age}}</h1>
+
     <h1>Department: {{data.department}}</h1>
-    <h1>marks :</h1>
-    {%for m in marks%}
-    <h2>{{m}}</h2>
-    {%endfor%}
+
+    <h2 class="section-title">Student Marks</h2>
+
+    <div class="marks">
+        {% for m in marks %}
+        <div class="mark-card">
+            {{m}}
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="footer">
+        © 2026 College Portal. All Rights Reserved.
+    </div>
+
+</div>
+
 </body>
 </html>

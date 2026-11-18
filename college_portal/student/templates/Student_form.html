@@ -15,7 +15,7 @@
 
         body {
             min-height: 100vh;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #102A56, #2563A6, #E4F1FF);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -25,21 +25,22 @@
         .container {
             width: 100%;
             max-width: 500px;
-            background: white;
+            background: #FFFFFF;
             padding: 35px;
             border-radius: 18px;
-            box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+            border: 1px solid #B8D7F5;
+            box-shadow: 0 15px 45px rgba(16,42,86,0.2);
         }
 
         h1 {
             text-align: center;
-            color: #333;
+            color: #102A56;
             margin-bottom: 10px;
         }
 
         .subtitle {
             text-align: center;
-            color: #777;
+            color: #718096;
             margin-bottom: 25px;
             font-size: 14px;
         }
@@ -52,29 +53,30 @@
             display: block;
             margin-bottom: 7px;
             font-weight: 600;
-            color: #444;
+            color: #102A56;
         }
 
         input {
             width: 100%;
             padding: 12px;
-            border: 1px solid #ccc;
+            border: 1px solid #B8D7F5;
             border-radius: 8px;
+            background: #F8FBFF;
             outline: none;
             font-size: 15px;
             transition: 0.3s;
         }
 
         input:focus {
-            border-color: #667eea;
-            box-shadow: 0 0 6px rgba(102,126,234,0.3);
+            border-color: #2563C7;
+            box-shadow: 0 0 8px rgba(37,99,199,0.25);
         }
 
         button {
             width: 100%;
             padding: 13px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
+            background: linear-gradient(135deg, #4A90E2, #2563C7);
+            color: #FFFFFF;
             border: none;
             border-radius: 8px;
             font-size: 16px;
@@ -84,30 +86,32 @@
         }
 
         button:hover {
+            background: linear-gradient(135deg, #2563C7, #102A56);
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102,126,234,0.4);
+            box-shadow: 0 7px 18px rgba(37,99,199,0.3);
         }
 
         .result {
             margin-top: 25px;
             padding: 18px;
-            background: #f0f8ff;
-            border-left: 4px solid #667eea;
+            background: #F8FBFF;
+            border: 1px solid #B8D7F5;
+            border-left: 5px solid #2563C7;
             border-radius: 8px;
         }
 
         .result h3 {
-            color: #444;
+            color: #2563C7;
             margin-bottom: 12px;
         }
 
         .result p {
             margin: 8px 0;
-            color: #555;
+            color: #53657D;
         }
 
         .result strong {
-            color: #333;
+            color: #102A56;
         }
 
         @media (max-width: 480px) {
