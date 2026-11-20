@@ -25,5 +25,6 @@ urlpatterns = [
     path('add/',views.student_form),
     path('login/', views.login_view, name='login'),
     path('dashboard/', views.dashboard, name='dashboard'),
-
+    path('logout/', views.logout_view, name='logout'),
+    path('api/students/', views.student_api, name='student_api'),
 ]

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College Portal | Logout</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #102A56, #2563A6, #E4F1FF);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logout-box {
+            width: 100%;
+            max-width: 430px;
+            background: #FFFFFF;
+            padding: 40px;
+            border-radius: 18px;
+            border: 1px solid #B8D7F5;
+            box-shadow: 0 15px 45px rgba(16,42,86,0.2);
+            text-align: center;
+        }
+
+        .logo {
+            width: 75px;
+            height: 75px;
+            background: linear-gradient(135deg, #4A90E2, #2563C7);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0 auto 22px;
+        }
+
+        h1 {
+            color: #102A56;
+            font-size: 27px;
+            margin-bottom: 12px;
+        }
+
+        .message {
+            color: #718096;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 13px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .login-btn {
+            background: linear-gradient(135deg, #4A90E2, #2563C7);
+            color: white;
+        }
+
+        .login-btn:hover {
+            background: #102A56;
+            transform: translateY(-2px);
+        }
+
+        .home-btn {
+            background: #E4F1FF;
+            color: #2563C7;
+            border: 1px solid #B8D7F5;
+        }
+
+        .home-btn:hover {
+            background: #D4E8FF;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            color: #8293AA;
+            font-size: 12px;
+            margin-top: 28px;
+        }
+
+        @media (max-width: 450px) {
+            .logout-box {
+                padding: 30px 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="logout-box">
+
+    <div class="logo">C</div>
+
+    <h1>You Have Logged Out!</h1>
+
+    <p class="message">
+        Thank you for visiting College Portal.
+        Your session has ended.
+        We hope to see you again!
+    </p>
+
+    <div class="buttons">
+
+        <a href="/login/" class="btn login-btn">
+            Login Again
+        </a>
+
+        <a href="/home/" class="btn home-btn">
+            Go to Home
+        </a>
+
+    </div>
+
+    <div class="footer">
+        © 2026 College Portal. All Rights Reserved.
+    </div>
+
+</div>
+
+</body>
+</html>
